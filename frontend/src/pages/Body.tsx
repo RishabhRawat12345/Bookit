@@ -5,7 +5,6 @@ type BodyProps = {
   search: string;
 };
 
-// Define data structure for each package
 interface Package {
   _id: string;
   name: string;
@@ -22,7 +21,7 @@ const Body: React.FC<BodyProps> = ({ search }) => {
 
   const dataall = async () => {
     try {
-      const res = await fetch("http://localhost:8080/api/experiences", {
+      const res = await fetch("https://bookit-m3xn.onrender.com/api/experiences", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -42,7 +41,7 @@ const Body: React.FC<BodyProps> = ({ search }) => {
 
   const handlenavigate = async (id:string) => {
   try {
-    const res = await fetch(`http://localhost:8080/api/experiences/${id}`, {
+    const res = await fetch(`https://bookit-m3xn.onrender.com/api/experiences/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

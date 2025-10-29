@@ -30,7 +30,7 @@ const Payment = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/api/promo/validate", {
+      const response = await fetch("https://bookit-m3xn.onrender.com/api/promo/validate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -77,7 +77,7 @@ const Payment = () => {
       };
 
       console.log(bookingData);
-      const response = await fetch("http://localhost:8080/api/bookings", {
+      const response = await fetch("https://bookit-m3xn.onrender.com/api/bookings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(bookingData),
